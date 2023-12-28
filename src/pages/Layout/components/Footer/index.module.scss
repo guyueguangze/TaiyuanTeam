@@ -3,7 +3,10 @@
 .root {
   height: 100%;
   width: 100%;
-  background-color: #000;
+  // background-color:  rgb(245,247,270);
+  // border-top-right-radius: 30;
+  // border-top-left-radius: 30;
+  background-color: #fff;
 
   :global {
     height: 100%;
@@ -56,14 +59,16 @@
         height: 20px;
         width: 100%;
         text-align: center;
+        
       }
     }
     .bottom-bar {
-      border-top: 1px solid $border-color;
+      border-top: 1px solid #e4ebf3;
       text-align: right;
       padding: 16px $padding-space;
       margin: 0;
       line-height: 32px;
+      background-color:  rgb(245,247,270)
     }
   }
 }

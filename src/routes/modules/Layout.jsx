@@ -21,35 +21,35 @@ export const UserLayoutRouter = [
         element: LazyLoad(React.lazy(() => import("@/pages/News"))),
       },
       {
-        path: "/axswards",
+        path: "/awards",
         element: LazyLoad(React.lazy(() => import("@/pages/Awards"))),
       },
       {
-        path: "/Blog",
+        path: "/blog",
         element: LazyLoad(React.lazy(() => import("@/pages/Blog"))),
       },
       {
-        path: "/Course",
+        path: "/course",
         element: LazyLoad(React.lazy(() => import("@/pages/Course"))),
       },
       {
-        path: "/Gallery",
+        path: "/gallery",
         element: LazyLoad(React.lazy(() => import("@/pages/Gallery"))),
       },
       {
-        path: "/Media",
+        path: "/media",
         element: LazyLoad(React.lazy(() => import("@/pages/Media"))),
       },
       {
-        path: "/Publications",
+        path: "/publications",
         element: LazyLoad(React.lazy(() => import("@/pages/Publications"))),
       },
       {
-        path: "/Talks",
+        path: "/talks",
         element: LazyLoad(React.lazy(() => import("@/pages/Talks"))),
       },
       {
-        path: "/Team",
+        path: "/team",
         element: LazyLoad(React.lazy(() => import("@/pages/Team"))),
       },
     ],

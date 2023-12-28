@@ -4,14 +4,13 @@ import { Outlet } from "react-router-dom"
 import Header from "./components/Header"
 import Content from "./components/Content"
 import Footer from "./components/Footer"
-import "./index.scss"
+import styles from './index.module.scss'
 export default function Layout() {
   const menus = [
     {
-      label: "News",
+      label: "About",
       path: "/home",
     },
-
     {
       label: "News",
       path: "/news",
@@ -50,7 +49,7 @@ export default function Layout() {
     },
   ]
   return (
-    <div>
+    <div className={styles.root}>
       <Header menus={menus}></Header>
       <Content>
         <Suspense fallback={<div>Loading...</div>}>
