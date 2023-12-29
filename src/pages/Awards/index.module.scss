@@ -1,6 +1,12 @@
 .root {
   :global {
-    height: 800px;
-    background-color: skyblue;
+    .awards_container {
+      margin: 50px;
+      .award_item {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 18px;
+      }
+    }
   }
 }

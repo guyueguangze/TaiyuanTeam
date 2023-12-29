@@ -19,10 +19,10 @@ export default function Layout() {
       label: "Publications",
       path: "/publications",
     },
-    {
-      label: "Blog",
-      path: "/blog",
-    },
+    // {
+    //   label: "Blog",
+    //   path: "/blog",
+    // },
     {
       label: "Course",
       path: "/course",
@@ -31,22 +31,22 @@ export default function Layout() {
       label: "Awards",
       path: "awards",
     },
-    {
-      label: "Talks",
-      path: "/talks",
-    },
-    {
-      label: "Media",
-      path: "/media",
-    },
+    // {
+    //   label: "Talks",
+    //   path: "/talks",
+    // },
+    // {
+    //   label: "Media",
+    //   path: "/media",
+    // },
     {
       label: "Team",
       path: "/team",
     },
-    {
-      label: "Gallery",
-      path: "/gallery",
-    },
+    // {
+    //   label: "Gallery",
+    //   path: "/gallery",
+    // },
   ]
   return (
     <div className={styles.root}>

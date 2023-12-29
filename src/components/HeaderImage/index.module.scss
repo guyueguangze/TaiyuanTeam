@@ -1,0 +1,27 @@
+.root {
+    :global {
+        .header_image {
+            background-color: transparent;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url("~@/assets/image/about/homeHeader.jpg");
+            background-position: 0 0, 30% 35%;
+            background-repeat: repeat, repeat;
+            background-size: auto, cover;
+            background-attachment: scroll, scroll;
+            border-bottom: 1px solid #e4ebf3;
+            padding: 20px 30px;
+            position: relative;
+            overflow: visible;
+            .hero-heading {
+              color: #fff;
+              text-align: right;
+              font-family: Exo, sans-serif;
+              font-size: 40px;
+              font-style: italic;
+              font-weight: 700;
+              line-height: 60px;
+            }
+          }
+    }
+  }
+  

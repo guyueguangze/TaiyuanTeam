@@ -1,6 +1,25 @@
 .root {
   :global {
-    height: 800px;
-    background-color: skyblue;
+    .news {
+      margin-bottom: 60px;
+      margin-left: 10%;
+      margin-right: 10%;
+      padding: 50px;
+
+      .news_item {
+        display: flex;
+        font-size: 22px;
+        list-style: circle;
+        .news_time {
+          padding: 10px;
+        }
+        .news_title {
+          padding: 10px;
+          .news_title_link {
+            text-decoration: solid;
+          }
+        }
+      }
+    }
   }
 }

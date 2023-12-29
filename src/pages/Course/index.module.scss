@@ -1,6 +1,21 @@
 .root {
   :global {
-    height: 800px;
-    background-color: skyblue;
+   .course_container{
+    margin: 0 5%;
+    .curse_content{
+      width: 50%;
+      min-width: 500px;
+      margin: 0 auto;
+      .course_item{
+        padding: 20px;
+        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        margin: 50px;
+        cursor: pointer;
+        font-size: 24px;
+      }
+    }
+   
+   }
   }
 }
