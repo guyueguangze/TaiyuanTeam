@@ -1,0 +1,73 @@
+.root {
+  :global {
+    // height: 800px;
+    // background-color: skyblue;
+    .AchievementDetail_container {
+      width: 80%;
+      margin: 0 auto;
+      .paper_title_content {
+        height: 200px;
+        background-color: rgb(18, 54, 94);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+
+
+        h1 {
+          text-align: center;
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 1.25em;
+        }
+        .author {
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+          font-size: 1.125rem;
+          font-weight: 300;
+          line-height: 1.23em;
+        }
+      }
+      .paper_button{
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        a{
+          text-decoration: none;
+          color: #000;
+        }
+      }
+      .Abstract{
+        margin-top: 20px;
+        margin-bottom: 10px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 36px;
+    
+      }
+      .Abstract_content{
+        text-align: justify;
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: 1.5em;
+    
+      }
+      .Team_embers{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .member{
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

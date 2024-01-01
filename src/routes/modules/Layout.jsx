@@ -17,6 +17,10 @@ export const UserLayoutRouter = [
         element: <About />,
       },
       {
+        path: "/achievementDetail",
+        element: LazyLoad(React.lazy(() => import("@/pages/AchievementDetail"))),
+      },
+      {
         path: "/news",
         element: LazyLoad(React.lazy(() => import("@/pages/News"))),
       },
@@ -31,6 +35,10 @@ export const UserLayoutRouter = [
       {
         path: "/course",
         element: LazyLoad(React.lazy(() => import("@/pages/Course"))),
+      },
+      {
+        path: "/courseDetail",
+        element: LazyLoad(React.lazy(() => import("@/pages/CourseDetail"))),
       },
       {
         path: "/gallery",

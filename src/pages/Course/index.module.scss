@@ -1,21 +1,37 @@
 .root {
   :global {
-   .course_container{
-    margin: 0 5%;
-    .curse_content{
-      width: 50%;
-      min-width: 500px;
-      margin: 0 auto;
-      .course_item{
-        padding: 20px;
-        box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
-        border-radius: 30px;
-        margin: 50px;
-        cursor: pointer;
-        font-size: 24px;
+    .course_container {
+      margin: 0 5%;
+      .curse_content {
+        width: 50%;
+        min-width: 500px;
+        margin: 0 auto;
+        .course_item {
+          padding: 20px;
+          box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.2);
+          border-radius: 30px;
+          margin: 50px;
+          cursor: pointer;
+          font-size: 24px;
+          .teacher_content {
+            .teacher_item {
+              height: 90px;
+             .teacher_name{
+              line-height: 90px;
+             }
+
+              display: flex;
+              .ant-avatar img{
+                height: 128%;
+              }
+            }
+          }
+          .course_intro{
+            text-align: justify;
+            font-size: 20px;
+          }
+        }
       }
     }
-   
-   }
   }
 }

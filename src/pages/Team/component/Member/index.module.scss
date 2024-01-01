@@ -1,0 +1,27 @@
+.root {
+  :global {
+    .team_content {
+      margin-top: 20px;
+      display: flex;
+      // width: 40%;
+      .team_content_left{
+        margin-right: 10px;
+        .ant-avatar img{
+          height: 128%;
+        }
+      }
+      .team_content_right {
+        .name {
+          font-weight: 700;
+          font-size: 1.5em;
+        }
+        .introduce {
+          font-size: 1.2rem;
+          line-height: 1.75em;
+          width: calc(100% - 100px);
+          text-align: justify;
+        }
+      }
+    }
+  }
+}

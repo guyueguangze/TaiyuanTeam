@@ -1,58 +1,52 @@
 .root {
   :global {
     .publication_container {
-      padding: 5%;
-      .Publications_title{
+      width: 70%;
+      margin: 50px auto;
+      // margin-top: 30px;
+      .Publications_title {
         font-size: 24px;
         font-weight: 600;
         margin-top: 30px;
-
       }
-      .Publications_item{
+      .Publications_item {
         font-size: 18px;
         padding: 5px;
-        .Publications_item_title{
+        .Publications_item_title {
           font-weight: 600;
           line-height: 1.5rem;
         }
-        .Publications_item_author{
-
+        .Publications_item_author {
         }
-        .Publications_item_place{
-
+        .Publications_item_place {
         }
       }
       .Publications {
-        .Publications_title{
+        .Publications_title {
           font-size: 24px;
           font-weight: 600;
           margin-top: 30px;
-
         }
-        .Publications_content{
-          .Publications_item{
+        .Publications_content {
+          .Publications_item {
             font-size: 18px;
             padding: 5px;
-            .Publications_item_title{
+            .Publications_item_title {
               font-weight: 600;
               line-height: 1.5rem;
             }
-            .Publications_item_author{
-
+            .Publications_item_author {
             }
-            .Publications_item_place{
-
+            .Publications_item_place {
             }
           }
         }
       }
       .Patents {
-        .Patents_title{
-
+        .Patents_title {
         }
-        .Patents_content{
-          .Patents_item{
-
+        .Patents_content {
+          .Patents_item {
           }
         }
       }
