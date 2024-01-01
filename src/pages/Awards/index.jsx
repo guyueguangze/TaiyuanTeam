@@ -1,8 +1,8 @@
-import React from "react";
-import styles from "./index.module.scss";
-import HeaderImage from "@/components/HeaderImage";
+import React from "react"
+import styles from "./index.module.scss"
+import HeaderImage from "@/components/HeaderImage"
 
-import "@/assets/styles/common.scss";
+import "@/assets/styles/common.scss"
 export default function index() {
   const awardsLst = [
     {
@@ -11,11 +11,12 @@ export default function index() {
       institution: "ICCAD",
       time: "2023",
     },
-  ];
+  ]
   return (
     <div className={styles.root}>
       <HeaderImage />
       <div className="awards_container">
+        <h1 className="big_title">Awards</h1>
         {awardsLst.map((item, index) => (
           <div key={index} className="award_item">
             <div className="rank">{item.rank}</div>
@@ -26,5 +27,5 @@ export default function index() {
         ))}
       </div>
     </div>
-  );
+  )
 }

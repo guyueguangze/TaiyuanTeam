@@ -1,10 +1,31 @@
 .root {
   :global {
-    // height: 800px;
-    // background-color: skyblue;
-    .course_detail_container{
+    .course_detail_container {
       width: 70%;
       margin: 0 auto;
+      .marginBotton20 {
+        margin-bottom: 20px;
+      }
+      .fontSize18 {
+        font-size: 18px;
+      }
+      .teacher_content {
+        .teacher_item {
+          height: 90px;
+          .teacher_name {
+            line-height: 90px;
+          }
+
+          display: flex;
+          .ant-avatar img {
+            height: 128%;
+          }
+        }
+      }
+      .course_book {
+        margin-top: 30px;
+        margin-bottom: 50px;
+      }
     }
   }
 }
