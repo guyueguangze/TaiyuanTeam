@@ -2,9 +2,13 @@
   :global {
     .course_container {
       margin: 0 5%;
+      .big_weight_text {
+        font-weight: 700;
+        line-height: 25px;
+      }
       .curse_content {
         width: 50%;
-        min-width: 500px;
+        min-width: 600px;
         margin: 0 auto;
         .course_item {
           padding: 20px;
@@ -12,23 +16,28 @@
           border-radius: 30px;
           margin: 50px;
           cursor: pointer;
-          font-size: 24px;
+          font-size: 16px;
+          transition: transform 0.5s;
+          &:hover {
+            transform: scale(1.05);
+          }
           .teacher_content {
             .teacher_item {
               height: 90px;
-             .teacher_name{
-              line-height: 90px;
-             }
+              .teacher_name {
+                line-height: 90px;
+              }
 
               display: flex;
-              .ant-avatar img{
+              .ant-avatar img {
                 height: 128%;
               }
             }
           }
-          .course_intro{
+          .course_intro {
             text-align: justify;
-            font-size: 20px;
+            font-size: 16px;
+            line-height: 29px;
           }
         }
       }

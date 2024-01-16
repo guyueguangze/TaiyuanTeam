@@ -1,27 +1,67 @@
-import React from "react";
-import styles from "./index.module.scss";
-import HeaderImage from "@/components/HeaderImage";
-import "@/assets/styles/common.scss";
+import React, { useState } from 'react'
+import styles from './index.module.scss'
+import HeaderImage from '@/components/HeaderImage'
+import '@/assets/styles/common.scss'
+import { Select, Space } from 'antd'
 
 export default function News() {
-  const newsList = [
+  const newToOld = [
     {
-      time: "2022年7月",
-      title: "天目1号”超导量子芯片应用成果重磅发布！",
-      link: "https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm",
+      time: '2022年7月',
+      title: '天目1号”超导量子芯片应用成果重磅发布！',
+      link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
     },
     {
-      time: "2021年12月",
-      title: "浙江大学发布“莫干1号”“天目1号”超导量子芯片",
-      link: "https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm",
+      time: '2021年12月',
+      title: '浙江大学发布“莫干1号”“天目1号”超导量子芯片',
+      link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
     },
-   
-  ];
+  ]
+  const oldToNew = [
+    {
+      time: '2021年12月',
+      title: '浙江大学发布“莫干1号”“天目1号”超导量子芯片',
+      link: 'https://hic.zju.edu.cn/2021/1220/c56173a2452801/page.htm',
+    },
+    {
+      time: '2022年7月',
+      title: '天目1号”超导量子芯片应用成果重磅发布！',
+      link: 'https://hic.zju.edu.cn/2022/0723/c56130a2605554/page.htm',
+    },
+  ]
+  const [newsList, setNewsList] = useState(newToOld)
+
+  const handleChange = (value) => {
+    if (value) {
+      setNewsList(oldToNew)
+    } else {
+      setNewsList(newToOld)
+    }
+  }
+
   return (
     <div className={styles.root}>
       <HeaderImage />
       <div className="news">
         <div className="news_title big_title">News</div>
+        <Select
+          defaultValue="Date(Newst to Oldest)"
+          onChange={handleChange}
+          style={{
+            width: '100%',
+            margin: '20px 0 30px 0',
+          }}
+          options={[
+            {
+              value: 0,
+              label: 'Date(Newst to Oldest)',
+            },
+            {
+              value: 1,
+              label: 'Date(Oldest to  Newst )',
+            },
+          ]}
+        />
         <ul className="news_content">
           {newsList.map((item, index) => (
             <li className="news_item" key={index}>
@@ -34,5 +74,5 @@ export default function News() {
         </ul>
       </div>
     </div>
-  );
+  )
 }

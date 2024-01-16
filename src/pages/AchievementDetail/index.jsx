@@ -1,19 +1,19 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
-import { Button } from "antd";
-import { UnorderedListOutlined } from "@ant-design/icons";
-import styles from "./index.module.scss";
+import React from 'react'
+import { useLocation } from 'react-router-dom'
+import { Button } from 'antd'
+import { UnorderedListOutlined } from '@ant-design/icons'
+import styles from './index.module.scss'
 export default function AchievementDetail() {
   const {
     state: { detail },
-  } = useLocation();
-  console.log(detail, 99);
+  } = useLocation()
+  console.log(detail, 99)
   return (
     <div className={styles.root}>
       <div className="AchievementDetail_container">
         <div className="paper_title_content">
           <h1>{detail.title}</h1>
-          <div className="author">{detail.author.join(",")}</div>
+          <div className="author">{detail.author.join(',')}</div>
         </div>
         <div className="paper_button">
           <a target="_blank" href={detail.link}>
@@ -22,7 +22,7 @@ export default function AchievementDetail() {
           </a>
         </div>
         <h2 className="Abstract">Abstract</h2>
-        <div className="Abstract_content">{detail.detailContent}</div>
+        <div className="Abstract_content">{detail.Abstract}</div>
         <h2 className="Team_embers">Team Members</h2>
         <div className="member">
           {detail.author.map((item, index) => (
@@ -31,9 +31,9 @@ export default function AchievementDetail() {
               type="text"
               style={{
                 marginRight: 20,
-                marginTop:20,
-                backgroundColor: "rgb(0, 63, 136)",
-                color: "#fff",
+                marginTop: 20,
+                backgroundColor: 'rgb(0, 63, 136)',
+                color: '#fff',
               }}
               key={index}
             >
@@ -43,5 +43,5 @@ export default function AchievementDetail() {
         </div>
       </div>
     </div>
-  );
+  )
 }

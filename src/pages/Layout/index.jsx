@@ -29,7 +29,7 @@ export default function Layout() {
     },
     {
       label: "Awards",
-      path: "awards",
+      path: "/awards",
     },
     // {
     //   label: "Talks",

@@ -4,6 +4,10 @@
       margin-top: 20px;
       display: flex;
       // width: 40%;
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.05);
+      }
       .team_content_left{
         margin-right: 10px;
         .ant-avatar img{

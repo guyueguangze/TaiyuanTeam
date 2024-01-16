@@ -1,11 +1,29 @@
 .root {
   :global {
+    min-height: 900px;
     .awards_container {
       margin: 50px;
+      .title {
+        margin-bottom: 30px;
+      }
       .award_item {
         display: flex;
         flex-wrap: wrap;
         font-size: 18px;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
+        .rank {
+          font-weight: 600;
+        }
+        .name {
+        }
+        .institution {
+        }
+        .time {
+        }
       }
     }
   }

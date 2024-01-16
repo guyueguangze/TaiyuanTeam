@@ -1,90 +1,78 @@
-import React from "react"
-import { Layout, Row, Col } from "antd"
-import styles from "./index.module.scss"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Layout, Row, Col } from "antd";
+import styles from "./index.module.scss";
+import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 export default function Footer() {
-  const { Footer } = Layout
+  const { Footer } = Layout;
   const footerStyle = {
     textAlign: "center",
     color: "#fff",
-    backgroundColor:" rgb(245,247,270)",
+    backgroundColor: " rgb(245,247,270)",
     padding: "86px 144px 93px 144px",
     borderTopRightRadius: 50,
-    borderTopLeftRadius: 50
-  }
-  function t(){
-
-  }
+    borderTopLeftRadius: 50,
+  };
+  function t() {}
   return (
     <div className={styles.root}>
       <Footer style={footerStyle}>
         <div className="footer_content">
           <div className="footer_menu">
             <Row>
-              <Col lg={6} sm={24} xs={24}>
-                <ul>
-                  <li className="footer_menu_title">
-                    <span>{t("footer.COMMON LINKS")}</span>
-                  </li>
-
-                  <li>
-                    <a href="http://www.cs.zju.edu.cn/">
-                      {t(
-                        "footer.School of Computer Science, Zhejiang University"
-                      )}
+              <Col lg={12} sm={24} xs={24}>
+                <Link to="/home">
+                  <div className="logo_content">
+                    <img className="logo" src={logo} alt="" />
+                    <span className="logo_name">Taiyuan</span>
+                  </div>
+                </Link>
+              </Col>
+              <Col lg={12} sm={24} xs={24}>
+                <div className="footer_Link">
+                  <p className="footer_Link_title">常用连接</p>
+                  <Link
+                    style={{ color: "#1a1b1f" }}
+                    to="/memberDetail"
+                    state={{ name: "jianweiyin" }}
+                  >
+                    <p>jianweiyin</p>
+                  </Link>
+                  <p>
+                    <a
+                      style={{ color: "#1a1b1f" }}
+                      target="_blank"
+                      href="http://www.cs.zju.edu.cn"
+                    >
+                      浙江大学计算机学院
                     </a>
-                  </li>
-                  <li>
-                    <a href="http://physics.zju.edu.cn/">
-                      {t("footer.School of Physics, Zhejiang University")}
+                  </p>
+                  <p>
+                    <a
+                      style={{ color: "#1a1b1f" }}
+                      target="_blank"
+                      href="https://www.zju.edu.cn"
+                    >
+                      浙江大学
                     </a>
-                  </li>
-                </ul>
-              </Col>
-              <Col lg={6} sm={24} xs={24}>
-                <ul>
-                  <li className="footer_menu_title">
-                    <span>{t("footer.USER GUIDE")}</span>
-                  </li>
-                  <li>
-                    <Link to="/home/document">{t("footer.USER GUIDE")}</Link>
-                  </li>
-                  <li></li>
-                </ul>
-              </Col>
-              <Col lg={6} sm={24} xs={24}>
-                <ul>
-                  <li className="footer_menu_title">
-                    <span>{t("footer.QUANTUM APPLICATIONS")}</span>
-                  </li>
-                  <li>
-                    <Link to="/notFound">{t("footer.Solutions")}</Link>
-                  </li>
-                </ul>
-              </Col>
-              <Col lg={6} sm={24} xs={24}>
-                <div className="footer_phone">
-                  <p className="footer_phone_title">{t("footer.CONTACT US")}</p>
-                  <p>{t("footer.Address")}</p>
-                  <p>{t("footer.Telephone")}:0571-81951139</p>
-                  <p>{t("footer.Zip code")}:310028</p>
+                  </p>
                 </div>
               </Col>
             </Row>
 
             {/* <div className='footer_commen_btn'>加入我们</div> */}
-          </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+          </div>
         </div>
       </Footer>
       <Row justify="center" className="bottom-bar">
         <Col>
-          <span style={{ marginRight: 12 }}> {t("footer.copyright")}</span>
           <span style={{ marginRight: 12 }}>
-            {t("footer.All rights reserved")}
+            版权所有&copy;浙江大学量子计算
           </span>
+          <span style={{ marginRight: 12 }}>保留一切权利</span>
         </Col>
       </Row>
     </div>
-  )
+  );
 }

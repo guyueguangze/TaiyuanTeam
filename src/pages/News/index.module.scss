@@ -1,5 +1,6 @@
 .root {
   :global {
+    min-height: 900px;
     .news {
       margin-bottom: 60px;
       margin-left: 10%;
@@ -10,6 +11,10 @@
         display: flex;
         font-size: 22px;
         list-style: circle;
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
         .news_time {
           padding: 10px;
         }

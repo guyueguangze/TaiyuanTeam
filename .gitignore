@@ -12,7 +12,7 @@
 /build
 /ide_test
 /src/simulator
-
+/build_lab
 # misc
 .DS_Store
 .env.local

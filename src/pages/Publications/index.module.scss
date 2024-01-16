@@ -12,6 +12,12 @@
       .Publications_item {
         font-size: 18px;
         padding: 5px;
+
+        transition: transform 0.5s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      
         .Publications_item_title {
           font-weight: 600;
           line-height: 1.5rem;

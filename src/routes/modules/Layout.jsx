@@ -60,6 +60,10 @@ export const UserLayoutRouter = [
         path: "/team",
         element: LazyLoad(React.lazy(() => import("@/pages/Team"))),
       },
+      {
+        path: "/memberDetail",
+        element: LazyLoad(React.lazy(() => import("@/pages/MemberDetail"))),
+      },
     ],
   },
 ]
