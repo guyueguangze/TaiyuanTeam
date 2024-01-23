@@ -314,17 +314,23 @@ export default function About() {
     },
   ]
   const [paperList, setPaperList] = useState(paperListZh)
+  // title
+  const titleListZh = ['研究方向', '成果']
+  const titleListEn = ['We Work On', 'Our Full-Stack Projects']
+  const [titleList, settitleList] = useState(titleListZh)
   useEffect(() => {
     if (lang === 'zh') {
       setresearchLists(researchListZh)
       setWhoAreWe(whoAreWeZh)
       setNewsList(newsListZh)
       setPaperList(paperListZh)
+      settitleList(titleListZh)
     } else {
       setresearchLists(researchListEn)
       setWhoAreWe(whoAreWeEn)
       setNewsList(newsListEn)
       setPaperList(paperListEn)
+      settitleList(titleListEn)
     }
   }, [lang])
 
@@ -342,7 +348,7 @@ export default function About() {
           </div>
         </div>
         <div className="we_work_on">
-          <h1 className="we_work_on_title big_title">研究方向</h1>
+          <h1 className="we_work_on_title big_title">{titleList[0]}</h1>
           <div className="we_work_on_content">
             <div className="we_work_on_content_left content_font">
               <div className="text">
@@ -394,7 +400,7 @@ export default function About() {
           </ul>
         </div>
         <div className="paper">
-          <div className="paper_title big_title">成果</div>
+          <div className="paper_title big_title">{titleList[1]}</div>
           <div className="paper_content">
             {paperList.map((item, index) => (
               <Link

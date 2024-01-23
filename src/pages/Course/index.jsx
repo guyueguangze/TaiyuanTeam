@@ -159,7 +159,7 @@ export default function Course() {
         '31 Introduction to Quantum Information Theory',
         '32 Quantum Teleportation and Quantum Communication Networks',
       ],
-      book: '参考书：Quantum Computation and Quantum Information, 10th Anniversary Edition, Michael A. Nielsen, Isaac L. Chuang',
+      book: 'Reference books：Quantum Computation and Quantum Information, 10th Anniversary Edition, Michael A. Nielsen, Isaac L. Chuang',
     },
     {
       title: 'Software Systems of Quantum Computing',
@@ -194,15 +194,41 @@ export default function Course() {
         '15 Quantum Computing Compiler (II): Compilation Optimization Methods at the Software Layer of Quantum Computing',
         '16 Quantum Computing Compiler (III): Compilation Optimization Methods at the Hardware Layer of Quantum Computing',
       ],
-      book: 'Quantum Computation and Quantum Information, 10th Anniversary Edition, Michael A. Nielsen, Isaac L. Chuang',
+      book: 'Reference books: Quantum Computation and Quantum Information, 10th Anniversary Edition, Michael A. Nielsen, Isaac L. Chuang',
     },
   ]
   const [courseList, setCourseList] = useState(curseList)
+  // titlelist
+  const titleListZh = [
+    '课程: ',
+    '开课学期: ',
+    '课程类型: ',
+    '学时: ',
+    '学分: ',
+    '主讲教师: ',
+    '课程简介: ',
+    '上课地点: ',
+    '上课时间: ',
+  ]
+  const titleListEn = [
+    'Course: ',
+    'Semester starting: ',
+    'Course type: ',
+    'Study hours: ',
+    'Credits: ',
+    'Lecturers:',
+    'Course overview: ',
+    'Class location: ',
+    'Class time: ',
+  ]
+  const [titleList, settitleList] = useState(titleListZh)
   useEffect(() => {
     if (lang === 'zh') {
       setCourseList(curseList)
+      settitleList(titleListZh)
     } else {
       setCourseList(curseListEn)
+      settitleList(titleListEn)
     }
   }, [lang])
 
@@ -220,29 +246,30 @@ export default function Course() {
             >
               <div className="course_item">
                 <div className="course_title">
-                  <span className="big_weight_text">课程：</span> {item.title}
+                  <span className="big_weight_text">{titleList[0]}</span>{' '}
+                  {item.title}
                 </div>
                 <div className="course_time">
-                  <span className="big_weight_text">开课学期：</span>
+                  <span className="big_weight_text">{titleList[1]}</span>
                   {item.time}
                 </div>
                 <div className="course_type">
-                  <span className="big_weight_text">课程类型：</span>
+                  <span className="big_weight_text">{titleList[2]}</span>
                   {item.type}
                 </div>
                 <div className="course_type">
-                  <span className="big_weight_text">学时：</span>
+                  <span className="big_weight_text">{titleList[3]}</span>
                   {item.Classhour}
                 </div>
                 <div className="course_type">
-                  <span className="big_weight_text">学分：</span>
+                  <span className="big_weight_text">{titleList[4]}</span>
                   {item.Credithour}
                 </div>
                 <div className="teacher_content">
                   {item.teacher.map((item1, index) => (
                     <div key={index} className="teacher_item">
                       <div className="teacher_name">
-                        <span className="big_weight_text">主讲教师：</span>
+                        <span className="big_weight_text">{titleList[5]}</span>
                         {item1.name}
                       </div>
                       <div className="teacher_photo">
@@ -255,7 +282,7 @@ export default function Course() {
                   ))}
                 </div>
                 <div className="course_intro">
-                  <span className="big_weight_text">课程简介：</span>
+                  <span className="big_weight_text">{titleList[6]}</span>
                   {item.intro}
                 </div>
               </div>

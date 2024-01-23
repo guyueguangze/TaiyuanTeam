@@ -43,7 +43,6 @@ export default function Header({ menus }) {
           style={{ borderColor: '#fff', color: '#000' }}
           size="small"
           onClick={changeLanguage}
-          ghost
         >
           {lang === 'zh' ? 'English' : '中文'}
           {/* */}

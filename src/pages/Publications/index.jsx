@@ -247,16 +247,21 @@ export default function Publications() {
     },
   ]
   const [CopyrightList, setCopyrightList] = useState(CopyrightListZh)
-
+  // titlelist
+  const titleListZh = ['论⽂', '专利', '软件著作权']
+  const titleListEn = ['Papers', 'Patents', 'Software copyright']
+  const [titleList, settitleList] = useState(titleListZh)
   useEffect(() => {
     if (lang === 'zh') {
       setPublicationsList(PublicationsListZh)
       setCopyrightList(CopyrightListZh)
       setPatentsListEn(CopyrightListZh)
+      settitleList(titleListZh)
     } else {
       setPublicationsList(PublicationsListEn)
       setCopyrightList(CopyrightListEn)
       setPatentsListEn(CopyrightListEn)
+      settitleList(titleListEn)
     }
   }, [lang])
   return (
@@ -265,7 +270,7 @@ export default function Publications() {
       <div className="publication_container">
         <div className="publication_title big_title"></div>
         <div className="Publications">
-          <div className="Publications_title taiyuanColor">论⽂</div>
+          <div className="Publications_title taiyuanColor">{titleList[0]}</div>
           <div className="Publications_content">
             {PublicationsList.map((item, index) => (
               <Link
@@ -286,7 +291,7 @@ export default function Publications() {
         </div>
         <div className="Patents">
           <div className="Patents_title Publications_title taiyuanColor">
-            专利
+            {titleList[1]}
           </div>
           <div className="Patents_content">
             {PatentsList.map((item, index) => (
@@ -302,7 +307,7 @@ export default function Publications() {
         </div>
         <div className="Copyright ">
           <div className="Copyright_title Publications_title taiyuanColor">
-            软件著作权
+            {titleList[2]}
           </div>
           <div className="Copyright_contetn">
             {CopyrightList.map((item, index) => (
