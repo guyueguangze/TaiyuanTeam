@@ -69,6 +69,9 @@
             position: relative;
             .SwiperSlide_content {
               position: absolute;
+              // &:local {
+              //   animation: moveDown 1s infinite alternate;
+              // }
               .title {
                 height: 70px;
                 font-weight: 600;
@@ -115,7 +118,7 @@
         }
       }
       .news {
-        max-width: 1200px;
+        // max-width: 1200px;
         margin: 0 auto;
         margin-bottom: 60px;
         margin-top: 30px;
@@ -129,6 +132,7 @@
           list-style: circle;
           .news_time {
             padding: 10px;
+            white-space: nowrap;
           }
           .news_title {
             padding: 10px;
@@ -189,5 +193,13 @@
         }
       }
     }
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
   }
 }

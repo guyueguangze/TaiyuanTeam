@@ -11,47 +11,6 @@ export default function CourseDetail() {
   return (
     <div className={styles.root}>
       <div className="course_detail_container">
-        {/* <div className="course_item">
-                <div className="course_title">
-                  <span className="big_weight_text">课程：</span> {courseData.title}
-                </div>
-                <div className="course_time">
-                  <span className="big_weight_text">开课学期：</span>
-                  {courseData.time}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">课程类型：</span>
-                  {courseData.type}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">学时：</span>
-                  {courseData.Classhour}
-                </div>
-                <div className="course_type">
-                  <span className="big_weight_text">学分：</span>
-                  {courseData.Credithour}
-                </div>
-                <div className="teacher_content">
-                  {courseData.teacher.map((item1, index) => (
-                    <div key={index} className="teacher_item">
-                      <div className="teacher_name">
-                        <span className="big_weight_text">主讲教师：</span>
-                        {item1.name}
-                      </div>
-                      <div className="teacher_photo">
-                        <Avatar
-                          size={60}
-                          src={<img src={item1.photo} alt="avatar" />}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="course_intro">
-                  <span className="big_weight_text">课程简介：</span>
-                  {courseData.intro}
-                </div>
-              </div> */}
         <div className="course_intorduce">
           <h1 className="title">{courseData.title}</h1>
           <Divider style={{ margin: '30px 0' }} />
@@ -103,7 +62,7 @@ export default function CourseDetail() {
         <List
           header={<div>课程大纲</div>}
           bordered
-          dataSource={courseData.outline}
+          dataSource={Array.from(courseData.outline)}
           renderItem={(item) => (
             <List.Item>
               <Typography.Text mark></Typography.Text> {item}
