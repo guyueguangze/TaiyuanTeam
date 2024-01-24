@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import styles from './index.module.scss'
 import logo from '@/assets/logo.png'
 import { useLangStore } from '@/store/lang'
@@ -7,12 +7,14 @@ import { Button } from 'antd'
 export default function Header({ menus }) {
   const { lang, toEn, toZh } = useLangStore()
   const location = useLocation()
+  const navigate = useNavigate()
   const changeLanguage = () => {
     if (lang == 'en') {
       toZh()
     } else {
       toEn()
     }
+    navigate('/home')
   }
   return (
     <div className={styles.root}>

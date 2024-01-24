@@ -10,7 +10,6 @@ import { useLangStore } from '@/store/lang'
 
 export default function Course() {
   const { lang } = useLangStore()
-
   const curseList = [
     {
       title: '量子计算基础理论与软件系统',
